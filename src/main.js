@@ -14,16 +14,15 @@ board.addEventListener('click', (event) => {
         // Iterate over squares array and update the value of the appropriate square
         squares.forEach(square => {
             if (square.id === squareNumber && square.value === '') {
-                squareElement.innerHTML = nextMark();
-                square["value"] = nextMark();
+                let nextSymbol = nextMark();
+                squareElement.innerHTML = nextSymbol;
+                square["value"] = nextSymbol;
             }
         });
 
+        checkGameOver();
         changePlayer();
 
-        if (threeInARow()) {
-            console.log('game over');
-        }
     }
 
 });

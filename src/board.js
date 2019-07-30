@@ -97,5 +97,7 @@ const threeInARow = () => {
 };
 
 const checkGameOver = () => {
-    
+    if (threeInARow()) {
+        window.alert(`${currentPlayer()} has won the game!`);
+    } 
 }

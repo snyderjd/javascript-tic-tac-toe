@@ -18,3 +18,11 @@ const changePlayer = () => {
         }
     });
 };
+
+const currentPlayer = () => {
+    if (players[0].turn === true) {
+        return `Player ${players[0].id}`;
+    } else {
+        return `Player ${players[1].id}`;
+    }
+};

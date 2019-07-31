@@ -34,6 +34,7 @@ newGameButton.addEventListener('click', (event) => {
             squares.forEach(square => {
                 if (square.id === squareNumber && square.value === '') {
                     let nextSymbol = nextMark();
+                    squareElement.classList.add(nextSymbol);
                     squareElement.innerHTML = nextSymbol;
                     square["value"] = nextSymbol;
                     checkGameOver();

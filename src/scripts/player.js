@@ -26,3 +26,13 @@ const currentPlayer = () => {
         return `Player ${players[1].id}`;
     }
 };
+
+const updateInstructions = () => {
+    const instructions = document.querySelector('.instructions__text');
+
+    if (currentPlayer() === 'Player 1') {
+        instructions.innerHTML = "Player 1: Please click in an empty box to place an 'X'.";
+    } else {
+        instructions.innerHTML = "Player 2: Please click in an empty box to place an 'O'.";
+    }
+}

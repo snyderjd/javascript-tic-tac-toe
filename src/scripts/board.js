@@ -49,7 +49,7 @@ const generateBoard = (array) => {
 const generateSquare = (object) => {
     const squareHTML = `
         <section class="square square__${object.id}">
-            <h2>${object.value}</h2>
+            <h2 class="letter">${object.value}</h2>
         <section>`
     return squareHTML;
     };

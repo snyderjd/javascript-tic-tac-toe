@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Tic-Tac-Toe</h1>
+    <h1 class="page__header">Tic-Tac-Toe</h1>
 
-    <button class="newGame">Start New Game</button>
+    <div class="newGameContainer">
+        <button class="newGame">Start New Game</button>
+    </div>
+
+    <div class="instructions">
+        <h2 class="instructions__header">Instructions:</h2>
+        <p class="instructions__text">Click on 'Start New Game' to start a new game.</p>
+    </div>
+
     <div class="board"></div>
     
-    <script src=player.js></script>
-    <script src=board.js></script>
-    <script src=main.js></script>
+    <script src=scripts/player.js></script>
+    <script src=scripts/board.js></script>
+    <script src=scripts/main.js></script>
 </body>
 </html>

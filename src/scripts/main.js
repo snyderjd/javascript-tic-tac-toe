@@ -16,6 +16,8 @@ newGameButton.addEventListener('click', (event) => {
 
     board.innerHTML = '';
     generateBoard(squares);
+    updateInstructions();
+
 
     // Enter 'X' or 'O' on a square when clicked, check if game over, and change to the next player
 
@@ -36,6 +38,7 @@ newGameButton.addEventListener('click', (event) => {
                     square["value"] = nextSymbol;
                     checkGameOver();
                     changePlayer();
+                    updateInstructions();
                 }
             });
         }

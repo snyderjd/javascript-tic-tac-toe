@@ -69,8 +69,6 @@ const nextMark = () => {
     }
 };
 
-
-
 const threeInARow = () => {
     let isWinning = false;
 
@@ -97,7 +95,11 @@ const threeInARow = () => {
 };
 
 const checkGameOver = () => {
+    let boardFull = false;
+
     if (threeInARow()) {
         window.alert(`${currentPlayer()} has won the game!`);
-    } 
-}
+    } else if (squares.every(square => square.value != '')) {
+        window.alert('Game over - its a tie!');
+    }
+};

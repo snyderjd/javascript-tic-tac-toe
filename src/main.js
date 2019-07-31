@@ -1,8 +1,11 @@
-
 const newGameButton = document.querySelector('.newGame');
+
+// newGameButton handles the logic to start a new game
 
 newGameButton.addEventListener('click', (event) => {
     const board = document.querySelector('.board');
+
+    // Reset player order, clear out square values, and generate a new board
 
     players[0].turn = true;
     players[1].turn = false;
@@ -13,6 +16,8 @@ newGameButton.addEventListener('click', (event) => {
 
     board.innerHTML = '';
     generateBoard(squares);
+
+    // Enter 'X' or 'O' on a square when clicked, check if game over, and change to the next player
 
     board.addEventListener('click', (event) => {
         const clickedItemClass = event.target.classList[0];

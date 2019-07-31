@@ -7,7 +7,7 @@ const players = [
         id: 2,
         turn: false
     }
-]
+];
 
 const changePlayer = () => {
     players.forEach(player => {
